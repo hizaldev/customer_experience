@@ -11,7 +11,7 @@ use Spatie\Permission\Traits\HasRoles;
 
 class TipeGangguans extends Model
 {
-    use HasFactory, HasUuids, SoftDeletes, Blameable, HasRoles;
+    use HasFactory, HasUuids, SoftDeletes, HasRoles;
 
     protected $fillable = [
         'tipe_gangguan',

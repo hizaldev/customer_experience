@@ -11,7 +11,7 @@ use Spatie\Permission\Traits\HasRoles;
 
 class CauseCategory extends Model
 {
-    use HasFactory, SoftDeletes, HasRoles, HasUuids, Blameable;
+    use HasFactory, SoftDeletes, HasRoles, HasUuids;
 
     protected $fillable = [
         'kategori_penyebab',
