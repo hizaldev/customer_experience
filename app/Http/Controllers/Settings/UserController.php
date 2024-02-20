@@ -107,7 +107,7 @@ class UserController extends Controller
             $data['user_id'] = Str::uuid();
             $data['name'] = $request->name;
             $data['email'] = $request->email;
-            $data['password'] = bcrypt($request->passwod);
+            $data['password'] = bcrypt($request->password);
             $create = User::create($data);
             $create->assignRole([$request->role_id]);
             ConstantController::successAlert();

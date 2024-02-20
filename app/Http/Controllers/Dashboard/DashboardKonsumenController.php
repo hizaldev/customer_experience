@@ -34,13 +34,13 @@ class DashboardKonsumenController extends Controller
             $consumer = Consumers::where('id', $item->consumer_id)->get();
         }
 
-        $consumerId = $request->get('consumer_id') ? $request->get('consumer_id') : 'xxxx';
+        $consumerId = $request->get('consumer_id') ? $request->get('consumer_id') : '9b2e4a83-ebda-44cd-a5a4-e6b257b7a940';
         $infoKonsumen = Consumers::where('id', $consumerId)->first();
         $areaId = $infoKonsumen ? $infoKonsumen->area_id : '999999';
         $dataKonsumem = $infoKonsumen ? $infoKonsumen->nama_ktt : 'UPT Semarang';
-        $dataGarduInduk = $infoKonsumen ? $infoKonsumen->location_id : 'asfdsdfsdfsdf';
-        $location = Locations::find($infoKonsumen == !null ? $infoKonsumen->location_id : 'rfefewr32r32');
-        $idfuncloc = $location ? $location->id_functloc : 'asfdsdfsdfsdf';
+        $dataGarduInduk = $infoKonsumen ? $infoKonsumen->location_id : '9b2e4a83-ebda-44cd-a5a4-e6b257b7a940';
+        $location = Locations::find($infoKonsumen == !null ? $infoKonsumen->location_id : '9b2e4a83-ebda-44cd-a5a4-e6b257b7a940');
+        $idfuncloc = $location ? $location->id_functloc : '9b2e4a83-ebda-44cd-a5a4-e6b257b7a940';
         $petugasGiKonsumen = User::where('level_substation', 'LIKE', "%{$dataGarduInduk}%")->get();
         // dd($idfuncloc);
         $endDate = Carbon::now()->locale('id')->isoFormat('Y-MM-DD');

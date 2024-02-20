@@ -70,7 +70,7 @@
                       <tbody>
                         @forelse ( $data_gangguan_type_by_ultg as $ultg )
                             <tr>
-                                <td >{{$ultg->nm_Lokasi}}</td>
+                                <td >{{$ultg->nm_lokasi}}</td>
                                 <td class="text-muted" >{{$ultg->pht}}</td>
                                 <td class="text-muted" >{{$ultg->trf}}</td>
                                 <td class="text-muted" >{{$ultg->dia}}</td>
@@ -233,7 +233,7 @@
                     }, 1000);
                     $('#filter-pqm').modal('hide');
                 },error:function(xhr,ajaxOptions,thrownError){
-                    alert(xhr.status+"\n"+xhr.responseText+"\n"+thrownError);
+                    // alert(xhr.status+"\n"+xhr.responseText+"\n"+thrownError);
                 }
             });
             $.ajax({
@@ -254,7 +254,8 @@
                     console.log(response)
                     chartGangguan(response.data)
                 },error:function(xhr,ajaxOptions,thrownError){
-                    alert(xhr.status+"\n"+xhr.responseText+"\n"+thrownError);
+                    // alert(xhr.status+"\n"+xhr.responseText+"\n"+thrownError);
+                    alert('Pilih Unit Terlebih dahulu');
                 }
             });
         }
